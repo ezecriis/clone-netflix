@@ -1,43 +1,94 @@
-// import React from 'react';
-// import facebookLogo from '../img/ic-facebook@1x.png'
-// import instagramLogo from '../img/ic-instagram@1x.png'
-// import twitterLogo from '../img/ic-twitter@1x.png'
-// import youtubeLogo from '../img/ic-youtube@1x.png'
-// import "./layout.css"
+import React from 'react';
+import '../css/footer.css';
+import facebookLogo from "../img/ic-facebook@1x.png"
+import instagramLogo from '../img/ic-instagram@1x.png'
+import twitterLogo from '../img/ic-twitter@1x.png'
+import youtubeLogo from '../img/ic-youtube@1x.png'
 
-// /*Footer*/
-// class Footer extends React.Component {
-//     render() {
-//         return <div className="hero-wrapper">
-//             <div class="social-container">
-//                 <a href="#">
-//                     <img width="25" src="~/assets/img/facebook-icon.svg" alt="facebook" />
-//                 </a>
-//                 <a href="#">
-//                     <img width="25" src="~/assets/img/instagram-icon.svg" alt="instagram" />
-//                 </a>
-//                 <a href="#">
-//                     <img width="27" src="~/assets/img/twitter-icon.svg" alt="twitter" />
-//                 </a>
-//                 <a href="#">
-//                     <img width="30" src="~/assets/img/youtube-icon.svg" alt="youtube" />
-//                 </a>
-//             </div>
-//             <ul class="footer-list">
-//                 <li class="footer-list-item"><a class="footer-link" href="#">Todos los titulos</a></li>
-//                 <li class="footer-list-item"><a class="footer-link" href="#">Prensa</a></li>
-//                 <li class="footer-list-item"><a class="footer-link" href="#">Confidencialidad</a></li>
-//                 <li class="footer-list-item"><a class="footer-link" href="#">Contacto</a></li>
-//                 <li class="footer-list-item"><a class="footer-link" href="#">Cancelar subscripcion</a></li>
-//                 <li class="footer-list-item"><a class="footer-link" href="#">Inversores</a></li>
-//                 <li class="footer-list-item"><a class="footer-link" href="#">Legales</a></li>
-//                 <li class="footer-list-item"><a class="footer-link" href="#">Ayuda</a></li>
-//                 <li class="footer-list-item"><a class="footer-link" href="#">RRHH</a></li>
-//                 <li class="footer-list-item"><a class="footer-link" href="#">Cookies</a></li>
-//             </ul>
-//             <span class="copy-right">© 1997-2018 Liteflix, Inc.</span>
-//         </div>
-//     }
-// }
+const footerLinks = [
+    {
+        name: 'Audio y subtitulos',
+        path: '',
+    },
+    {
+        name: 'Audio descriptivo',
+        path: '',
+    },
+    {
+        name: 'Centro de ayuda',
+        path: '',
+    },
+    {
+        name: 'Tarjeta de regalo',
+        path: '',
+    },
+    {
+        name: 'Prensa',
+        path: '',
+    },
+    {
+        name: 'Relaciones con inversionistas',
+        path: '',
+    },
+    {
+        name: 'Empleo',
+        path: '',
+    },
+    {
+        name: 'Terminos de uso',
+        path: '',
+    },
+    {
+        name: 'Privacidad',
+        path: '',
+    },
+    {
+        name: 'Aviso legales',
+        path: '',
+    },
+    {
+        name: 'Preferencias de cookies',
+        path: '',
+    },
+    {
+        name: 'Informacion corporativa',
+        path: '',
+    },
+    {
+        name: 'Contactanos',
+        path: '',
+    },
+];
 
-// export default Footer;
+const Footer = () => (
+    <div className="footer_container">
+        <div className="footer_inside_container">
+            <table className="footerSocialMedia">
+                <tbody>
+                    <tr>
+                        <td><img src={facebookLogo} alt="Facebook" /></td>
+                        <td><img src={instagramLogo} alt="Instagram" /></td>
+                        <td><img src={twitterLogo} alt="Twitter" /></td>
+                        <td><img src={youtubeLogo} alt="Youtube" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div className="footer_links">
+                {footerLinks.map((link) => <div key={link.name}><p>{link.name}</p></div>)}
+            </div>
+            <div className="footer_language_selector">
+                <select>
+                    <option>
+                        Codigo de servicio
+          </option>
+                    <option>
+                        485-393
+          </option>
+                </select>
+            </div>
+            <span> © 1997-2021 Liteflix, Inc.</span>
+        </div>
+    </div>
+);
+
+export default Footer;

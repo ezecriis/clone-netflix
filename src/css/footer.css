@@ -1,0 +1,153 @@
+.social-container {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  margin-top: 1em;
+  margin-left: 5%;
+  margin-bottom: 1em;
+}
+
+.copy-right {
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.footer-list {
+  color: #999999;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50px, 250px));
+  column-gap: 30px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-list-item {
+  margin-bottom: .8em;
+}
+
+.member-footer {
+  max-width: 980px;
+  margin: 20px auto 0;
+  padding: 0 4%;
+  color: grey;
+}
+
+.member-footer .social-links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.4rem #333333 solid;
+  font-weight: normal;
+  color: #a6a6a6;
+  overflow: hidden;
+}
+
+.footer_inside_container {
+  width: 85%;
+  padding: 4.3rem 2.8rem;
+}
+
+.footer_links {
+  margin: 0;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.footer_links > div > p {
+  width: fit-content;
+}
+
+.footer_links > div > p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer_links div {
+  font-size: 0.8rem;
+  padding: 0.5rem 0.2rem;
+  flex: 1 0 21%;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+h4 {
+  padding: 0.5rem 0;
+}
+
+.footer_language_selector {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  border: 0.1rem #333333 solid;
+}
+
+.footer_language_selector select {
+  font-size: 1rem;
+  border-style: none;
+  background-color: #000;
+  color: #a6a6a6;
+  padding: 1rem;
+}
+
+option {
+  padding: 1rem;
+  border-style: none;
+}
+
+@media (max-width: 550px) {
+  .footer_inside_container {
+    width: 85%;
+    padding: 2rem 2.8rem;
+    padding-bottom: 2.8rem;
+  }
+
+  .footer_links div {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1 0 45%;
+  }
+
+  option {
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@include desktop {
+  .footer {
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+  .footer-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(50px, 250px));
+    column-gap: 50px;
+  }
+}
