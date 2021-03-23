@@ -16,8 +16,6 @@ export default class UserPopUp extends Component {
     this.handleClic = this.handleClic.bind(this)
   }
 
-
-
   handleClic() {
     this.setState(prevState => ({
       isOpen: !prevState.isOpen
@@ -26,10 +24,7 @@ export default class UserPopUp extends Component {
 
   render() {
 
-
-
     return (
-      // <React.Fragment>
       <div className="pop-up-wrapper">
 
         <button
@@ -52,24 +47,21 @@ export default class UserPopUp extends Component {
           id="pop-up-content"
           className={this.state.isOpen ? 'open' : 'closed'}>
           <ul className="user-list">
-            <li className="user active" role="menuitem">
+            <li className="user active" role="presentation">
               <div className="user-icon-wrapper">
                 <img src={UserIcon} alt="User icon" className="user-icon" />
               </div>
-              {
-
-                // <span className="user-name">Ernesto Garmendia</span>
-              }
 
               <span className="user-name">Ernesto Garmendia</span>
+
             </li>
-            <li className="user" role="menuitem">
+            <li className="user" role="presentation">
               <div className="user-icon-wrapper">
                 <img src={UserIcon} alt="User icon" className="user-icon" />
               </div>
               <span className="user-name">User 03</span>
             </li>
-            <li className="user" role="menuitem">
+            <li className="user" role="presentation">
               <div className="user-icon-wrapper">
                 <img src={UserIcon} alt="User icon" className="user-icon" />
               </div>
@@ -86,10 +78,6 @@ export default class UserPopUp extends Component {
         </div>
       </div>
 
-      // </React.Fragment>
-
-
     )
   }
-
 }

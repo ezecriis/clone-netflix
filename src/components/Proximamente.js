@@ -1,8 +1,6 @@
-// import React from "react";
 import React, { Component } from "react"
 import Loader from "./Loader"
 import Icon from "./Icon"
-
 
 const API_URL = 'https://api.themoviedb.org/3/movie/upcoming?api_key=';
 const KEY = '6f26fd536dd6192ec8a57e94141f8b20';
@@ -45,9 +43,6 @@ class Proximamente extends Component {
       // let genreId = item.genre_ids
       let isAdult = item.adult
 
-      // console.log("Item popular:")
-      // console.log(item)
-
       return (
         <div className="movie-wrapper">
           <img
@@ -59,12 +54,10 @@ class Proximamente extends Component {
           <div className="on-hover">
             <div className="button-wrapper">
 
-
               <button className="wrap-circle" aria-label="Mi Lista">
                 <Icon icon="add"></Icon>
                 <div className="circle"></div>
               </button>
-
 
               <button className="wrap-circle" aria-label="Me gusta">
                 <Icon icon="like"></Icon>

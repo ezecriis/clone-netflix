@@ -11,9 +11,6 @@ const categories = [
   { label: "Suspenso", value: "Suspenso" }
 ];
 
-
-
-
 export default class Categories extends Component {
 
   constructor(props) {
@@ -42,7 +39,6 @@ export default class Categories extends Component {
           IndicatorsContainer: () => null
         }}
         options={categories} />
-
     )
   }
 }

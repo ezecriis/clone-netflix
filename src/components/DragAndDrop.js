@@ -4,8 +4,6 @@
 import React, { Component } from 'react';
 import Icon from "./Icon"
 
-
-
 export default class DragAndDrop extends Component {
     state = {
         isLoading: false,
@@ -15,17 +13,16 @@ export default class DragAndDrop extends Component {
         file: ''
     };
 
-
     imageUpload = (e) => {
         const file = e.target.files[0];
         getBase64(file)
             .then(base64 => {
                 this.setState({ isLoading: true, progress: 40 });
-                console.log("isLoading", this.state.isLoading);
-                console.log("progress", this.state.progress);
+                // console.log("isLoading", this.state.isLoading);
+                // console.log("progress", this.state.progress);
 
                 localStorage["fileBase64"] = base64;
-                console.log("file stored", base64);
+                // console.log("file stored", base64);
             })
             .then(
                 this.setState({
@@ -34,7 +31,6 @@ export default class DragAndDrop extends Component {
                     success: true
                 })
             )
-
     };
 
     render() {
@@ -93,7 +89,6 @@ export default class DragAndDrop extends Component {
         }
     }
 }
-
 
 const getBase64 = (file) => {
     return new Promise((resolve, reject) => {

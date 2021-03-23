@@ -73,23 +73,23 @@ class Nav extends Component {
             </div>
 
             <ul className="navigation-items">
-              <li role="menuitem">Cambiar Usuario</li>
-              <li role="menuitem">Configuración</li>
-              <li role="menuitem">Ayuda</li>
+              <li role="presentation">Cambiar Usuario</li>
+              <li role="presentation">Configuración</li>
+              <li role="presentation">Ayuda</li>
             </ul>
 
             <ul className="navigation-items">
-              <li role="menuitem"> <img src={Bell} alt="Notification icon" /> Novedades</li>
-              <li role="menuitem">Series</li>
-              <li role="menuitem">Películas</li>
-              <li role="menuitem">Mi lista</li>
-              <li role="menuitem">Niños</li>
+              <li role="presentation"> <img src={Bell} alt="Notification icon" /> Novedades</li>
+              <li role="presentation">Series</li>
+              <li role="presentation">Películas</li>
+              <li role="presentation">Mi lista</li>
+              <li role="presentation">Niños</li>
             </ul>
 
             <Modal modalProps={this.modalProps} modalContent={this.modalContent} />
 
             <ul className="navigation-items">
-              <li role="menuitem">Log Out</li>
+              <li role="presentation">Log Out</li>
             </ul>
           </div>
 

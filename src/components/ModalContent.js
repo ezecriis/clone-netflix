@@ -10,10 +10,11 @@ export class ModalContent extends Component {
     super(props);
     this.state = {}
   }
-  
+
   render() {
     return ReactDOM.createPortal(
       <FocusTrap>
+        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
         <aside
           tag="aside"
           role="dialog"
@@ -34,23 +35,11 @@ export class ModalContent extends Component {
               <span id="close-modal" className="visually-hidden">
                 Close
               </span>
-              {
-                // <svg className="_modal-close-icon" viewBox="0 0 40 40" >
-                //   <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
-                // </svg>
 
-              }
               <Icon icon="close" />
             </button>
             <div className="modal-body">
-              {
-                // passed from Nav in modalContent = ()
-                // this.props.content
-              }
-
               <Form />
-
-
             </div>
           </div>
         </aside>

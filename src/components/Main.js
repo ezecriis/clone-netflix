@@ -39,7 +39,7 @@ class Main extends Component {
                     </div>
                 </section>
             </main>
-                {/* <Footer /> */}
+                <Footer />
             </>
         )
     }

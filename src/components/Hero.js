@@ -1,8 +1,5 @@
-// import React from "react";
 import React, { Component } from "react"
 import Loader from "./Loader"
-
-
 class Hero extends Component {
   constructor(props) {
     super(props)
@@ -40,8 +37,6 @@ class Hero extends Component {
       let title = item.original_title
       let overview = item.overview
       let coverImg = base_url + "/original/" + item.backdrop_path
-      // console.log("Hero item:");
-      // console.log(item);
       let heroBackground = {
         backgroundImage: "linear-gradient(to top, rgba(0, 0, 0, 0.2), #000000), url(" + coverImg + ")",
       }
@@ -74,7 +69,6 @@ class Hero extends Component {
           </div>
 
         </header>
-
       )
     }
   }

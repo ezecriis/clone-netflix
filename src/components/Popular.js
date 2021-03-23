@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import Loader from "./Loader"
 import Icon from "./Icon"
 
-
 const API_URL = 'https://api.themoviedb.org/3/movie/popular?api_key=';
 const KEY = '6f26fd536dd6192ec8a57e94141f8b20';
 
@@ -16,7 +15,6 @@ class Popular extends Component {
     }
   }
 
-
   componentDidMount() {
     fetch(API_URL + KEY)
       .then(res => res.json())
@@ -27,6 +25,7 @@ class Popular extends Component {
         })
       })
   }
+
   render() {
     var { isLoaded, items } = this.state
 
@@ -64,9 +63,7 @@ class Popular extends Component {
 
             {/*</div>*/}
 
-
             <div className="middle-wrapper">
-
               <div className="details">
                 <h3 className="movie-title"> {title} </h3>
                 <p className="movie-details">
