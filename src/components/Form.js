@@ -39,6 +39,18 @@ export default class Form extends Component {
     const { title } = this.state;
 
     localStorage.setItem('title', title);
+
+
+
+    const peliLocalStorage = localStorage.getItem('categorias', title);
+    console.log(peliLocalStorage);
+
+    // Get the title with the objet
+    localStorage.setItem('title', JSON.stringify(this.state));
+    JSON.parse(localStorage.getItem('title'));
+
+    
+
   };
 
   render() {

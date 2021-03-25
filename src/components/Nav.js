@@ -1,14 +1,11 @@
-//import Button add -> que muestra el Modal
 import React, { Component } from "react";
 
 import Logo from "../img/liteflix-logo.png"
 import UserIcon from "../img/icon-user.png"
 import Bell from "../img/bell.png"
-
 import Modal from "./Modal";
 import Icon from "./Icon"
 import UserPopUp from "./PopUpUser";
-
 
 class Nav extends Component {
   constructor(props) {
@@ -16,7 +13,7 @@ class Nav extends Component {
 
     this.state = { isToggleOn: false };
 
-    // Este enlace es necesario para hacer que `this` funcione en el callback
+    // This link is necessary to make `this` link work in the callback
     this.handleMenuTrigger = this.handleMenuTrigger.bind(this);
   }
 
@@ -24,14 +21,14 @@ class Nav extends Component {
     triggerText: "Agregar película"
   };
   modalContent = (
-    <React.Fragment>
+    <>
       <p>
         Press <code>Esc</code> or click Outside the Modal to exit.
       </p>
       <p>
         Pressing Return also exits the Modal if you haven't changed the focus!
       </p>
-    </React.Fragment>
+    </>
   );
 
   handleMenuTrigger() {

@@ -12,7 +12,6 @@ const categories = [
 ];
 
 export default class Categories extends Component {
-
   constructor(props) {
     super(props);
 
@@ -25,6 +24,11 @@ export default class Categories extends Component {
   handleSelect = selectedOption => {
     const category = selectedOption.value;
     this.setState({ selectedOption });
+
+    const peliLocalStorage = localStorage.getItem('categorias', category);
+    console.log(peliLocalStorage);
+
+    
     console.log(`Option selected:`, category);
     localStorage.setItem('category', category);
   };

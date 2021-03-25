@@ -40,11 +40,7 @@ class Popular extends Component {
       let item = items.results[this.props.index]
       let title = item.original_title
       let coverImg = base_url + "/w780/" + item.poster_path
-      // let genreId = item.genre_ids
       let isAdult = item.adult
-
-      // console.log("Item popular:")
-      // console.log(item)
 
       return (
         <div className="movie-wrapper">
@@ -55,13 +51,10 @@ class Popular extends Component {
             alt={title + "cover"}
           />
           <div className="on-hover">
-            {/*<div className="button-wrapper">*/}
             <button className="wrap-circle" aria-label="Reproducir">
               <Icon icon="play"></Icon>
               <div className="circle"></div>
             </button>
-
-            {/*</div>*/}
 
             <div className="middle-wrapper">
               <div className="details">
