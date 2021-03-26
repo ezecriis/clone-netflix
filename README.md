@@ -24,6 +24,6 @@ npm run develop
 
 ## 👾 Demo
 
-Feel free to play around with the finished website at: https://netflix-clon.herokuapp.com/
+Feel free to play around with the finished website at: https://liteflix.surge.sh/
 
 ![Liteflix](https://user-images.githubusercontent.com/59458303/112490316-06797f00-8d5e-11eb-815c-1fc2d3a0a023.png)
