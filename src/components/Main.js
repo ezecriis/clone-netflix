@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Proximamente from "./Proximamente";
 import Popular from "./Popular";
 import Footer from "./Footer";
+import Rankeada from "./Rankeada";
 class Main extends Component {
     constructor(props) {
         super(props);
@@ -23,7 +24,15 @@ class Main extends Component {
                             <Proximamente index={2} />
                             <Proximamente index={3} />
                         </div>
-
+                    </section>
+                    <section className="proximamente-wrapper">
+                        <h2>Mejores Rankeadas</h2>
+                        <div className="flex-wrapper">
+                            <Rankeada index={0} />
+                            <Rankeada index={1} />
+                            <Rankeada index={2} />
+                            <Rankeada index={3} />
+                        </div>
                     </section>
                     <section className="populares-wrapper">
                         <h2>POPULARES  DE LITEFLIX</h2>
