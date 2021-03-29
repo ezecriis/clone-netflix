@@ -1,10 +1,6 @@
-// TO DO: Lift state up in parent component
-// https://reactjs.org/docs/lifting-state-up.html#lifting-state-up
-
 import React, { Component } from 'react';
 import DragAndDrop from './DragAndDrop';
 import Categories from './Categories';
-
 export default class Form extends Component {
   constructor(props) {
     super(props);
@@ -40,23 +36,17 @@ export default class Form extends Component {
 
     localStorage.setItem('title', title);
 
-
-
     const peliLocalStorage = localStorage.getItem('categorias', title);
     console.log(peliLocalStorage);
 
     // Get the title with the objet
     localStorage.setItem('title', JSON.stringify(this.state));
     JSON.parse(localStorage.getItem('title'));
-
-    
-
   };
 
   render() {
     return (
       <form onSubmit={this.handleFormSubmit}>
-
         <DragAndDrop></DragAndDrop>
         <div id="movie-info" className="fieldset">
           <div className="field title">
@@ -79,9 +69,7 @@ export default class Form extends Component {
           </div>
 
           <div className="field category">
-
             <Categories value={this.state.category} />
-
           </div>
         </div>
         <div className="button-wrapper">

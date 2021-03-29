@@ -1,9 +1,5 @@
-//https://jsfiddle.net/5pu1brag/
-// https://stackoverflow.com/questions/19183180/how-to-save-an-image-to-localstorage-and-display-it-on-the-next-page
-
 import React, { Component } from 'react';
 import Icon from "./Icon"
-
 export default class DragAndDrop extends Component {
     state = {
         isLoading: false,
@@ -18,11 +14,7 @@ export default class DragAndDrop extends Component {
         getBase64(file)
             .then(base64 => {
                 this.setState({ isLoading: true, progress: 40 });
-                // console.log("isLoading", this.state.isLoading);
-                // console.log("progress", this.state.progress);
-
                 localStorage["fileBase64"] = base64;
-                // console.log("file stored", base64);
             })
             .then(
                 this.setState({
@@ -34,9 +26,7 @@ export default class DragAndDrop extends Component {
     };
 
     render() {
-
         if (this.state.isLoading) {
-
             return (
                 <div id="drag-and-drop" className={this.state.error ? ' error ' : this.state.success ? ' success ' : ' loading '}>
                     <p className="message">
@@ -63,7 +53,6 @@ export default class DragAndDrop extends Component {
                     </button>
                 </div>
             )
-
         } else {
             return (
                 <div id="drag-and-drop" className="fieldset">
@@ -85,7 +74,6 @@ export default class DragAndDrop extends Component {
                     </div>
                 </div>
             )
-
         }
     }
 }

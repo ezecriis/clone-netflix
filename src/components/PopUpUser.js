@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import UserButton from "../img/user-icon.png"
 import ArrowIcon from "../img/arrow.png"
-
 import UserIcon from "../img/icon-user.png"
 
 export default class UserPopUp extends Component {
