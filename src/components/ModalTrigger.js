@@ -1,8 +1,5 @@
-//Button add -> que muestra el Modal
 import React, { Component } from "react";
-
 import Icon from "./Icon"
-
 class ModalTrigger extends Component {
     constructor(props) {
         super(props);
@@ -21,6 +18,5 @@ class ModalTrigger extends Component {
         );
     }
 }
-
 
 export default ModalTrigger

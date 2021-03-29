@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import Logo from "../img/liteflix-logo.png"
 import UserIcon from "../img/icon-user.png"
 import Bell from "../img/bell.png"
@@ -112,7 +111,6 @@ class Nav extends Component {
           </ul>
 
           <ul className="navigation-items right">
-            
             <li>
               Niños
             </li>

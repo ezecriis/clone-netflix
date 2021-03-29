@@ -1,7 +1,3 @@
-// localStorage input component
-// based on this tutorial: 
-// https://programmingwithmosh.com/react/localstorage-react/
-
 import React, { Component } from "react";
 
 class MovieTitle extends Component {
@@ -38,6 +34,5 @@ class MovieTitle extends Component {
         )
     }
 }
-
 
 export default MovieTitle

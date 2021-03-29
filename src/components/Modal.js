@@ -1,11 +1,6 @@
-//Modal component from tutorial:
-//https://programmingwithmosh.com/javascript/create-modal-using-react/
-
 import React, { Component } from 'react';
 import ModalContent from './ModalContent';
 import ModalTrigger from './ModalTrigger';
-
-
 export class Modal extends Component {
   constructor() {
     super();
@@ -42,9 +37,8 @@ export class Modal extends Component {
 
 
   render() {
-
     return (
-      <React.Fragment>
+      <>
         <ModalTrigger
           showModal={this.showModal}
           buttonRef={n => (this.TriggerButton = n)}
@@ -62,7 +56,7 @@ export class Modal extends Component {
         ) : (
             <React.Fragment />
           )}
-      </React.Fragment>
+      </>
     );
   }
 }
